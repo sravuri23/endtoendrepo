@@ -173,15 +173,15 @@
                 <executions>
                     <execution>
                         <id>execution</id>
-                        <phase>test</phase>
+                        <phase>install</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <projectName>cucumbertests</projectName>
                             <outputDirectory>target/cucumber-report/cucumber-html-reports</outputDirectory>
-                            <cucumberOutput>target/cucumber-report/cucumber.json</cucumberOutput>
-                            <enableFlashCharts>false</enableFlashCharts>
+                            <cucumberOutput>target/cucumber-report/runwebat/</cucumberOutput>
+                            <!--enableFlashCharts>false</-enableFlashCharts-->
                         </configuration>
                     </execution>
                 </executions>
@@ -263,11 +263,11 @@
         </dependency>
 
         <!--PhantomJsDriver Custom to support latest Webdriver-->
-        <dependency>
+        <!--dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>${phantomjs.version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
 

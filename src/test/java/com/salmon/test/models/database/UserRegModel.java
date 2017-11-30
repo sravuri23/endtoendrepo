@@ -4,6 +4,20 @@ import lombok.Data;
 
 @Data
 public class UserRegModel {
-    String logonId;
-    String status;
+
+
+    String title;
+    String firstName;
+    String lastName;
+    String phoneNumber;
+    String emailAddress;
+    String password;
+    String verifyPassword;
+    String doB;
+    String repPwd;
+    String errorMsgKey;
+    String email;
+    String toolTip;
+    String forgotPWD;
+
 }

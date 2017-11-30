@@ -255,6 +255,10 @@ public abstract class PageObject {
         return (new WebDriverWait(getWebDriver(), DRIVER_WAIT_TIME)).until(ExpectedConditions.elementToBeClickable(by));
     }
 
+    public WebElement elementToBeVisible(By by) {
+        return (new WebDriverWait(getWebDriver(), DRIVER_WAIT_TIME)).until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
 
     /**
      * An expectation for checking an element is visible and enabled such that you
@@ -411,6 +415,36 @@ public abstract class PageObject {
 
     public String getElementByQueryJSExecutor(String cssSelector) {
         return ((JavascriptExecutor) webDriver).executeScript("return window.getComputedStyle(document.querySelector('" + cssSelector + "')").toString();
+    }
+
+    /**
+     * Find the dynamic element wait until its visible for a specified time
+     *
+     * @param by                Element location found by css, xpath, id etc...
+     * @param waitTimeInSeconds max time to wait until element is visible
+     */
+    /**
+     * Wrapper for driver.findElement
+     *
+     * @param by Element location found by css, xpath, id etc...
+     **/
+    protected WebElement element(final By by) {
+        return getWebDriver().findElement(by);
+    }
+
+    public void scrollAndClick(WebElement webElement) {
+        Point hoverItem = webElement.getLocation();
+
+        clickWithinElementWithXYCoordinates(webElement, hoverItem.getX(), hoverItem.getY());
+        webElement.click();
+
+    }
+
+    public void jsClick(WebElement element) {
+        ((JavascriptExecutor) getWebDriver()).executeScript("arguments[0].focus();", element);
+
+        ((JavascriptExecutor) getWebDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) getWebDriver()).executeScript("arguments[0].click()", element);
     }
 
 }
