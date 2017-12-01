@@ -124,11 +124,9 @@ public class AddToBasketPage extends PageObject {
 
     public void clickOnProceedToCheckout() {
 
-
-
+        webDriver.manage().window().maximize();
         WebElement element = webDriver.findElement(proceedToCheckOutButton);
-
-       ((JavascriptExecutor)webDriver).executeScript("scroll(0,1200)");
+        ((JavascriptExecutor)webDriver).executeScript("scroll(0,1200)");
         waitForExpectedElement(proceedToCheckOutButton);
         element.click();
 
