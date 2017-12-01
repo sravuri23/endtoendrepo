@@ -61,7 +61,7 @@ public class AddToBasketSteps {
 
     @And("^I click on add to shopping bag button$")
     public void iClickOnAddToShoppingBagButton() throws Throwable {
-
+       addToBasketPage.clickOnSizeFour();
        addToBasketPage.clickOnAddToShoppingBagButton();
 
     }
@@ -99,6 +99,17 @@ public class AddToBasketSteps {
     public void theOrderPlacedSuccessfully() throws Throwable {
 
         Assertions.assertThat(addToBasketPage.orderConfirmationOrderNumberTextDisplayed());
+        //createAccountPage.signOutButtonClick();
 
+    }
+
+    @And("^I should be redirected to PDP page with product label displayed$")
+    public void iShouldBeRedirectedToPDPPage() throws Throwable {
+        Assertions.assertThat(addToBasketPage.checkProductNameHeadingIsDisplayed());
+    }
+
+    @And("^I select the size of the product$")
+    public void iSelectTheSizeOfTheProduct() throws Throwable {
+      addToBasketPage.clickOnSizeFour();
     }
 }

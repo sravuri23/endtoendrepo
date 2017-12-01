@@ -34,7 +34,7 @@ public class AddToBasketPage extends PageObject {
     private By cvcNumberTextField = By.cssSelector("#cc_cvc_1");
     private By placeOrderButton = By.cssSelector("#confirmButton");
     private By orderNumberTextConfirmation = By.cssSelector("p.orderNumber > span.strong");
-
+    private By productNameHeader = By.cssSelector("h1.main_header");
 
     public void enterSearchFieldText() {
         waitForExpectedElement(searchTextField);
@@ -77,6 +77,18 @@ public class AddToBasketPage extends PageObject {
 
     }
 
+
+//    public Boolean checkSizeOfTheProductIsDisplayed(){
+//
+//        waitForExpectedElement(sizeNumber4);
+//        return elementIsDisplayedOrNot(element(sizeNumber4));
+//    }
+
+
+    public Boolean checkProductNameHeadingIsDisplayed(){
+        waitForExpectedElement(productNameHeader);
+        return elementIsDisplayedOrNot(element(productNameHeader));
+    }
 
     public void clickOnAddToShoppingBagButton() {
         elementToBeClickable(addToShoppingBag);

@@ -9,14 +9,20 @@ Background:
   Given I navigate to the hotter "Home" page
   When I click on My Account link from the header
   And I enter valid login credentials
-
+  When I enter "Marlowe GTX® Boots" and click on search
+  And  I should see the product in the pdp page
+  And  I click on displayed product
 
   Scenario:Verify Available Online In stock is present in the pdp page
+   And I should be redirected to PDP page with product label displayed
+   And I select the size of the product
+   Then I should see the Available Online In-stock displayed
+   When I click on My Account link from the header
+   And  I click on signout to logout of my account
 
-    When I enter "Marlowe GTX® Boots" and click on search
-     And  I should see the product in the pdp page
-     And  I click on displayed product
-     Then I should see the Available Online In-stock displayed
+
+Scenario: Verify the user is able to proceed to checkout page
+
      And  I click on add to shopping bag button
      Then the product should be added to the basket successfully
      When I click on checkout button from the quick view basket
