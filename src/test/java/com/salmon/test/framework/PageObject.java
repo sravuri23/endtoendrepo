@@ -146,6 +146,24 @@ public abstract class PageObject {
     }
 
 
+
+    public Boolean elementIsDisplayedOrNot(WebElement element) {
+
+        Boolean displayed = true;
+
+        try {
+
+            if (element.isDisplayed())
+                displayed = true;
+
+        } catch (Throwable t) {
+
+            displayed = false;
+        }
+
+        return displayed;
+    }
+
     /**
      * An expectation for checking if the given text is present in the specified element.
      *

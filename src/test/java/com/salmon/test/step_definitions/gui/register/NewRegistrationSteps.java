@@ -3,6 +3,9 @@ package com.salmon.test.step_definitions.gui.register;
 
 import com.salmon.test.framework.helpers.utils.RandomGenerator;
 import com.salmon.test.page_objects.gui.NewRegistrationPage;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lombok.Getter;
 
@@ -41,6 +44,7 @@ public class NewRegistrationSteps {
 
 
     }
+
 
 
 }
