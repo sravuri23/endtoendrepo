@@ -173,7 +173,7 @@ public class CreateAccountPage extends PageObject {
     public void submitButton()
     {
         jsClick(waitForExpectedElement(submitButton));
-        System.out.println("Button clicked");
+
 
         }
 

@@ -91,7 +91,7 @@ public class AddToBasketPage extends PageObject {
     }
 
     public void clickOnAddToShoppingBagButton() {
-        elementToBeClickable(addToShoppingBag);
+       // elementToBeClickable(addToShoppingBag);
         waitForExpectedElement(addToShoppingBag).click();
 
     }
@@ -105,7 +105,7 @@ public class AddToBasketPage extends PageObject {
 
 
     public void clickOnCheckout() {
-
+      waitForExpectedElement(checkOutButton);
         elementToBeClickable(checkOutButton).click();
 
 
