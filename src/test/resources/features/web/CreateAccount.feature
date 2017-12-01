@@ -1,5 +1,5 @@
 
-@gui
+@gui @demo
 Feature: Acceptance test for create an account
   As a customer
   I want to register when I am in the hotters website
