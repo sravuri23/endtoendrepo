@@ -1,4 +1,3 @@
-
 @gui @demo
 Feature: Acceptance test for create an account
   As a customer
@@ -8,17 +7,15 @@ Feature: Acceptance test for create an account
 
 Background:
   Given I navigate to the hotter "Home" page
-
+  When I click on My Account link from the header
 
   Scenario: Account creation from hotter site
-    When I click on My Account link from the header
     And  I click on register link from the signin page
     And  I fill in the registration form
     Then I should see the confirmation page
 
 
   Scenario: Verify registered user is able to login
-    When I click on My Account link from the header
     And I enter valid login credentials
     And I should be able to login
 

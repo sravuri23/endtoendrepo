@@ -10,6 +10,7 @@ Background:
   When I click on My Account link from the header
   And I enter valid login credentials
 
+
   Scenario:Verify Available Online In stock is present in the pdp page
 
     When I enter "Marlowe GTX® Boots" and click on search

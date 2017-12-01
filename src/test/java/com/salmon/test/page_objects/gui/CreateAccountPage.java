@@ -28,8 +28,8 @@ public class CreateAccountPage extends PageObject {
     private String monthData = "December";
     private String yearData =     "1985";
     private String addressFinderData = "wd171da";
-    private String loginEmailData= "sravuri@salmon.com";
-    private String loginPasswodData="London23";
+    private String loginEmailData= "marcintest14@gmail.com";
+    private String loginPasswodData="Pa55word14";
 
 
     private By myAccountLink = By.cssSelector("#ems_country_11253 > div:nth-child(6) > div:nth-child(1) > a");
