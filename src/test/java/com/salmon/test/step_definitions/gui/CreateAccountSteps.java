@@ -75,7 +75,6 @@ public class CreateAccountSteps {
 
     @And("^I enter valid login credentials$")
     public void iEnterValidLoginCredentials() throws Throwable {
-
         createAccountpage.enterLoginCredentials();
 
     }
