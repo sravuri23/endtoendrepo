@@ -33,7 +33,7 @@ public class CreateAccountPage extends PageObject {
 
 
     private By myAccountLink = By.cssSelector("#ems_country_11253 > div:nth-child(6) > div:nth-child(1) > a");
-    private By registerButton = By.cssSelector("#WC_AccountDisplay_links_3 > div.button_text");
+    private By registerButton = By.cssSelector("div#WC_AccountDisplay_div_24.button_align a#WC_AccountDisplay_links_3.button_primary");
     private By titleList = By.name("personTitle");
     private By firstNameField = By.cssSelector("input[type='text'][name='firstName']");
     private By lastNameField = By.cssSelector("input[type='text'][name='lastName']");
