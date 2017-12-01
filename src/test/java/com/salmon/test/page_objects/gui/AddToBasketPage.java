@@ -13,6 +13,8 @@ public class AddToBasketPage extends PageObject {
 
 
     private String SearchData = "Marlowe GTX® Boots";
+    // use the below query to update the qty on above product
+    // update receipt set QTYONHAND = 10010000 where VERSIONSPC_ID = 260716
 
     private By searchTextField = By.cssSelector("#SimpleSearchForm_SearchTerm");
     private By searchIcon = By.cssSelector("#search_submit");
