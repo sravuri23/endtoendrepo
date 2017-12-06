@@ -59,8 +59,8 @@ public class CreateAccountPage extends PageObject {
     private By loginEmailTextField= By.cssSelector("#WC_AccountDisplay_FormInput_logonId_In_Logon_1");
     private By passwordTextField=By.cssSelector("input[type='password'][name='logonPassword']");
     private By loginButton=By.xpath(".//*[@id='WC_AccountDisplay_links_2']/div[2]");
-    private By signOutButton = By.xpath(".//*[@id='ems_my_account_summary_2_12323']/div[1]/ul/a/li/a");
-    private By SignOutText = By.cssSelector("#ems_my_account_summary_2_12323 > div.section_list.bottom_border > ul > a > li > a");
+    private By signOutButton = By.cssSelector(".section_list.bottom_border.sign-out>ul>li>a");
+    private By myAccountHeaderText = By.cssSelector("#MyAccountBreadcrumbLink");
 
 
 
@@ -179,7 +179,7 @@ public class CreateAccountPage extends PageObject {
 
     public WebElement myAccountPageText()
     {
-        return  getWebDriver().findElement(SignOutText);
+        return  getWebDriver().findElement(myAccountHeaderText);
     }
 
    /* public void enterAddressManuallyLink() {
@@ -377,7 +377,7 @@ public class CreateAccountPage extends PageObject {
 
 
    public void  signOutButtonClick(){
-       waitForExpectedElement(signOutButton).click();
+       elementToBeClickable(signOutButton).click();
    }
 
 

@@ -43,6 +43,7 @@ public class CreateAccountSteps {
     public void iClickOnMyAccountLinkFromTheHeader() throws Throwable {
         createAccountpage.clickMyAccountLink();
 
+
     }
 
     @And("^I click on register link from the signin page$")
