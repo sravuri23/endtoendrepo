@@ -93,14 +93,6 @@ public class CreateAccountPage extends PageObject {
 
     }
 
-      /*  #WC_AccountDisplay_links_3 > div.button_text
-
-        List<WebElement> ls = webDriver.findElements(By.tagName("a"));
-        getWait();
-        ls.get(290).click();
-        waitForExpectedElement(titleList);
-*/
-
 
 //        List<WebElement> l  = webDriver.findElements(By.tagName("a"));
 //        int x = l.size();
