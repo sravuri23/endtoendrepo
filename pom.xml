@@ -181,7 +181,7 @@
                             <projectName>cucumbertests</projectName>
                             <outputDirectory>target/cucumber-report/cucumber-html-reports</outputDirectory>
                             <cucumberOutput>target/cucumber-report/cucumber.json</cucumberOutput>
-                            <enableFlashCharts>false</enableFlashCharts>
+                            <!--enableFlashCharts>true</enableFlashCharts-->
                         </configuration>
                     </execution>
                 </executions>
@@ -263,11 +263,11 @@
         </dependency>
 
         <!--PhantomJsDriver Custom to support latest Webdriver-->
-        <dependency>
+        <!--dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>${phantomjs.version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
 
@@ -373,30 +373,30 @@
 
 
         <!--DB2 database dependency-->
-        <dependency>
+        <!--dependency>
             <groupId>com.ibm.db2.jcc</groupId>
             <artifactId>db2jcc</artifactId>
             <version>${db2.version}</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/tools/lib/db2jcc.jar</systemPath>
-        </dependency>
+        <-dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>com.ibm.db2.jcc</groupId>
             <artifactId>db2jcc_license_cu</artifactId>
             <version>${db2.version}</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/tools/lib/db2jcc_license_cu.jar</systemPath>
-        </dependency>
+        </dependency-->
 
         <!--oracle database dependency-->
-        <dependency>
+        <!--dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
             <version>${oracle.version}</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/tools/lib/ojdbc14.jar</systemPath>
-        </dependency>
+        </dependency-->
         <!--oracle database dependency-->
 
         <!--auto fill random data to POJO-->
@@ -405,12 +405,12 @@
             <artifactId>podam</artifactId>
             <version>${podam}</version>
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>1.4.0</version>
             <scope>test</scope>
-        </dependency>
+        </dependency-->
         <!--auto fill random data to POJO-->
 
 

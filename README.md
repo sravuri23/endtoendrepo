@@ -1,14 +1,12 @@
-![Salmon](/salmonlogo.png)
-================================
-Salmon Test Automation Framework
-================================
-This project is a template for Salmon's test automation framework, which provides structured and standard way of 
-creating automated test scripts for GUI, Mobile, API and Database level tests across salmon projects  
+SatishAutomation Practice FrameWork
+===================================
+This project is a template for satish's test automation framework, which provides structured and standard way of
+creating automated test scripts for GUI, Mobile, API and Database level tests across satish projects
 
 This is a reusable automation framework that blends together Selenium WebDriver, Appium, Android Driver, RestEasy, Database, SauceLabs and Cucumber JVM (incorporating Gherkin and the BDD 'Given, When Then' testing construct)   
 
 This framework supports automation of : - 
-*Web Browsers (Firefox, Chrome, Internet Explorer, Safari)  
+*Web Browsers (Firefox, Chrome, Internet Explorer, Safari)
 *Web Browser Responsive Design with view ports configuration  
 *Mobile Automation on Emulated and Physical Devices, for Native, Hybrid, and Web App  
 *Mobile Automation on Cloud using SauceLabs  
@@ -27,9 +25,9 @@ encapsulates the fields represented by a page which ultimately avoids duplicatio
 Sonar Continuous Code Quality Management: -
 conventions (Checkstyle), bad practices (PMD) and potential bugs (FindBugs).
 
-
+'================='
 Tools & libraries
-=================
+'================='
 The test automation framework is comprised of following tools and libraries  
 
 *Cucumber-JVM:- BDD Framework  
@@ -64,18 +62,13 @@ Contact information
 ===================
 Overall Test & Test management support
 ------------------------------------------
-Nick Gee
---------
-Head of Testing  
-ngee@salmon.com  
 
 
 Test Automation framework support
 ------------------------------------------
-Ramesh Reddy
+Satish Kumar
 --------------
-Head of Automation
-rrbaddipadaga@salmon.com  
+
 
 
 

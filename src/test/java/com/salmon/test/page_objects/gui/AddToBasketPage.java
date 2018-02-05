@@ -11,7 +11,7 @@ import java.util.List;
 
 public class AddToBasketPage extends PageObject {
 
-
+   // private String SearchData = "shoes";
     private String SearchData = "Marlowe GTX® Boots";
     // use the below query to update the qty on above product
     // update receipt set QTYONHAND = 10010000 where VERSIONSPC_ID = 260716

@@ -133,6 +133,9 @@ public abstract class PageObject {
         }
     }
 
+
+
+
     private ExpectedCondition<WebElement> visibilityOfElementLocated(final By by) throws NoSuchElementException {
         return driver -> {
             try {
@@ -416,6 +419,7 @@ public abstract class PageObject {
     }
 
 
+
     public void navigateToPreviousPageUsingBrowserBackButton() {
         webDriver.navigate().back();
     }
@@ -464,5 +468,25 @@ public abstract class PageObject {
         ((JavascriptExecutor) getWebDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) getWebDriver()).executeScript("arguments[0].click()", element);
     }
+
+
+
+    /**
+     * Wrapper for wait, clear data and sendKeys in Input Text box
+     * <p>
+     * * @param by Element location found by css, xpath, id etc...
+     *
+     * @param inputText text to be entered
+     **/
+    protected void waitClearEnterText(By by, String inputText) {
+        waitForExpectedElement(by).clear();
+        element(by).sendKeys(inputText);
+    }
+
+
+
+
+
+
 
 }

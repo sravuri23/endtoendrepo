@@ -1,6 +1,6 @@
 =======================
 
-**Selenium Grid Setup**
+Selenium Grid Setup**
 
 =======================
 

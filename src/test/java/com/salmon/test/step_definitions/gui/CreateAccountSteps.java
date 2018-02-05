@@ -1,19 +1,25 @@
 package com.salmon.test.step_definitions.gui;
-import com.salmon.test.framework.helpers.WebDriverHelper;
+
+import com.salmon.test.framework.helpers.Props;
 import com.salmon.test.framework.helpers.UrlBuilder;
 import com.salmon.test.framework.helpers.utils.RandomGenerator;
+import com.salmon.test.models.cucumber.DeliveryAddressModel;
+import com.salmon.test.models.cucumber.UserDetailsModel;
 import com.salmon.test.page_objects.gui.CreateAccountPage;
 
-import cucumber.api.java.en.*;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import org.assertj.core.api.Assertions;
-import cucumber.api.PendingException;
+
+import java.net.URI;
+import java.util.List;
 
 import static com.salmon.test.enums.PermittedCharacters.ALPHABETS;
 import static com.salmon.test.framework.helpers.utils.RandomGenerator.random;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class CreateAccountSteps {
@@ -30,14 +36,15 @@ public class CreateAccountSteps {
     }
 
 
-    @Given("^I navigate to the hotter \"([^\"]*)\" page$")
-    public void i_navigate_to_the_Salmon_page(String pageName) throws Throwable {
-        if (pageName.equalsIgnoreCase("HOME")) {
-            UrlBuilder.startAtHomePage();
-        }
+//    @Given("^I navigate to the hotter \"([^\"]*)\" page$")
+//    public void i_navigate_to_the_Salmon_page(String pageName) throws Throwable {
+//        if (pageName.equalsIgnoreCase("HOME")) {
+//            UrlBuilder.startAtHomePage();
+//        }
 
 
-    }
+
+
 
     @When("^I click on My Account link from the header$")
     public void iClickOnMyAccountLinkFromTheHeader() throws Throwable {
@@ -69,21 +76,20 @@ public class CreateAccountSteps {
     @Then("^I should see the confirmation page$")
     public void iShouldSeeTheConfirmationPage() throws Throwable {
 
-        Assertions.assertThat(createAccountpage.myAccountPageText());
         createAccountpage.signOutButtonClick();
     }
 
 
-    @And("^I enter valid login credentials$")
+   /* @And("^I enter valid login credentials$")
     public void iEnterValidLoginCredentials() throws Throwable {
         createAccountpage.enterLoginCredentials();
 
-    }
+    }*/
 
     @And("^I should be able to login$")
     public void iShouldBeAbleToLogin() throws Throwable {
-        Assertions.assertThat(createAccountpage.myAccountPageText());
-        createAccountpage.signOutButtonClick();
+
+        createAccountpage.loginButtonClick();
 
     }
 
@@ -93,4 +99,74 @@ public class CreateAccountSteps {
 
     }
 
+
+    @Then("^I should see an error message$")
+    public void iShouldSeeTheErrorMessage() throws Throwable {
+
+        assertThat(createAccountpage.errorMessageInvalidLogin().contains(Props.getMessage("inv.errormessage")));
+
+
+    }
+
+
+    @When("^I enter invalid \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void iEnterInvalidAnd(String arg0, String arg1) throws Throwable {
+
+    }
+
+    @When("^I enter invalid acccount details$")
+    public void iEnterInvalidAcccountDetails(List<UserDetailsModel> loginUserDetails) throws Throwable {
+
+        for (UserDetailsModel flag : loginUserDetails) {
+
+            createAccountpage.enterInvalidLoginDetails(flag);
+
+
+        }
+
+
+    }
+
+    @When("^I click on Add new address button$")
+    public void iClickOnAddNewAddressButton() throws Throwable {
+        createAccountpage.clickMyAddressLink();
+        createAccountpage.clickOnAddNewAddressButton();
+    }
+
+
+    @Then("^verify error message if I enter invalid details leaving a mandatory field empty to delivery address field$")
+    public void verifyErrorMessageIfIEnterInvalidDetailsLeavingAMandatoryFieldEmptyToDeliveryAddressField(List<DeliveryAddressModel> deliveryAddressModel) throws Throwable {
+
+        for (DeliveryAddressModel itr : deliveryAddressModel) {
+            createAccountpage.enterNewAddressMandatoryDetails(itr);
+            switch (itr.getErrorMessage()) {
+                case "errorAddressNameFieldIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("addressName")).isEqualToIgnoringCase(Props.getMessage("addressNameemptyMessage"));
+                    break;
+                case "errorFirstNameFieldIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("firstName")).isEqualToIgnoringCase(Props.getMessage("firstNameemptyMessage"));
+                    break;
+                case "errorLastNameFieldIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("lastName")).isEqualToIgnoringCase(Props.getMessage("lastNameemptyMessage"));
+                    break;
+                case "errorAddressline1IsdMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("addressLine1")).isEqualToIgnoringCase(Props.getMessage("addressline1emptyMessage"));
+                    break;
+                case "errorCityFieldIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("city")).isEqualToIgnoringCase(Props.getMessage("cityNameemptyMessage"));
+                    break;
+                case "errorZIPpostalcodeIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("postalCodeField")).isEqualToIgnoringCase(Props.getMessage("postalCodeFieldEmptyMessage"));
+                    break;
+                case "errorphonenumberIsMandatory":
+                    assertThat(createAccountpage.fieldValidationMessage("phoneNumberField")).isEqualToIgnoringCase(Props.getMessage("phoneNumberFieldEmptyMessage"));
+                    break;
+            }
+        }
+    }
 }
+
+
+
+
+

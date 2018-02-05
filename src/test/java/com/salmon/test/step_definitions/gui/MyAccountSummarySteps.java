@@ -5,6 +5,7 @@ import com.salmon.test.step_definitions.gui.register.NewRegistrationSteps;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -28,9 +28,6 @@ public class AddToBasketSteps {
     @And("^I should see the product in the pdp page$")
     public void iShouldSeeTheProductInThePdpPage() throws Throwable {
         Assertions.assertThat(addToBasketPage.checkProductIconisDisplayed());
-
-
-
     }
 
     @And("^I click on displayed product$")
@@ -112,4 +109,6 @@ public class AddToBasketSteps {
     public void iSelectTheSizeOfTheProduct() throws Throwable {
       addToBasketPage.clickOnSizeFour();
     }
+
+
 }
