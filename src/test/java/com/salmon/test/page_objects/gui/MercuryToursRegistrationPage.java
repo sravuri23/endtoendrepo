@@ -8,6 +8,8 @@ import lombok.ToString;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import javax.validation.constraints.AssertTrue;
+
 public class MercuryToursRegistrationPage extends PageObject {
 
     private By registerButton = By.xpath("html/body/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/a");
@@ -212,6 +214,13 @@ public class MercuryToursRegistrationPage extends PageObject {
     }
 
 
+
+    public void getTitle(){
+        getWebDriver().getTitle();
+        if(getWebDriver().getTitle().contains("mercury")){
+            System.out.println("testpass");
+        }
+    }
 
 
 }

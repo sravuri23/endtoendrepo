@@ -4,6 +4,7 @@ import com.salmon.test.framework.helpers.UrlBuilder;
 import com.salmon.test.models.cucumber.MercuryLoginUserModel;
 import com.salmon.test.models.cucumber.MercuryToursSignUpModel;
 import com.salmon.test.page_objects.gui.MercuryToursRegistrationPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -159,4 +160,9 @@ public class MercuryToursSteps {
         mercuryToursRegistrationPage.clickOnSignOnButton();
     }
 
+    @And("^the title is displayed as expected$")
+    public void theTitleIsDisplayedAsExpected() throws Throwable {
+       mercuryToursRegistrationPage.getCurrentPageTitle();
+
+    }
 }

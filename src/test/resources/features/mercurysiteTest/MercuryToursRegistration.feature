@@ -39,3 +39,7 @@ Feature: As a new user I want to register in mercury travel site
 #    And I click on login button on MercuryTours Page
     Then I should be able to login successfully
 
+
+
+  Scenario: Verify the title of the mercurysite page
+      And the title is displayed as expected
