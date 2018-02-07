@@ -22,6 +22,20 @@
                 <testToRun>**/*WebATSuite*.class</testToRun>
             </properties>
         </profile>
+    <!-- Test Profiles, define URL for AUT, Browser and Test Suites -->
+
+       <!-- Development environment @ my local machine -->
+        <profile>
+            <id>dev01_flightsite</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profile.path>/profiles/dev01_flightsite/config.properties</profile.path>
+                <testToRun>**/*WebATSuite*.class</testToRun>
+            </properties>
+        </profile>
+
 
         <!-- Single Test -->
         <profile>
