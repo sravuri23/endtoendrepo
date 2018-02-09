@@ -11,7 +11,6 @@ Feature: As a new user I want to register in mercury travel site
       | Field Name      |
       | FirstName       |
       | LastName        |
-      | Phone           |
       | Email           |
       | Address         |
       | City            |

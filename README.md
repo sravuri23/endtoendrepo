@@ -58,10 +58,6 @@ The test automation framework is comprised of following tools and libraries
 *AssertJ: - Used for multiple assertions for further info visit this site (http://joel-costigliola.github.io/assertj/)  
 *PODAM:- Auto random data generator for models
 
-Contact information
-===================
-Overall Test & Test management support
-------------------------------------------
 
 
 Test Automation framework support
@@ -73,14 +69,14 @@ Satish Kumar
 
 
 Machine Configuration
-====================
+
 Configure Ubuntu / Windows and setup: -   
 *Java 8  
 *Git  / SVN  
 *Maven  
 
 Setting up Git in your local machine (if not setup already)
-==============================================
+
 
 Follow the link https://help.github.com/articles/set-up-git/ 
 
@@ -89,7 +85,7 @@ Follow the link https://help.github.com/articles/set-up-git/
 3. Generate SSH key and add to your profile
 
 Get the latest Source Code
-===========================
+
 Open Terminal or command line
 cd to the desired folder where the test automation source code needs to be checkout
 

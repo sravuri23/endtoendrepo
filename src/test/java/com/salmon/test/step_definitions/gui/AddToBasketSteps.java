@@ -108,6 +108,7 @@ public class AddToBasketSteps {
     @And("^I select the size of the product$")
     public void iSelectTheSizeOfTheProduct() throws Throwable {
       addToBasketPage.clickOnSizeFour();
+
     }
 
 
