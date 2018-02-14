@@ -26,7 +26,7 @@ public class ScreenshotHook {
             Map<String, Object> screenShots = ScreenshotHelper.getScreenShotsForCurrentTest();
             for (Map.Entry<String, Object> screenShot : screenShots.entrySet()) {
                 scenario.write(screenShot.getKey());
-                scenario.embed((byte[]) screenShot.getValue(), "image/png");
+                scenario.embed((byte[]) screenShot.getValue(), "image/.jpg");
             }
 
             ScreenshotHelper.tidyUpAfterTestRun();
