@@ -15,14 +15,14 @@ import java.util.Map;
         "rerun:target/cucumber-report/runwebat/rerun.txt"},
         glue = "com.salmon.test")
 public class RunWebATSuite extends AbstractTestNGCucumberTests {
-    @BeforeClass
-    public static void setup() {
-        ExtentCucumberFormatter.initiateExtentCucumberFormatter(new File("target/feature-overview/SatishAutomationReport.html"));
-        // Loads the extent config xml to customize on the report.
-        ExtentCucumberFormatter.loadConfig(new File("src/test/resources/extent-config.xml"));
-        // Also you can add system information using a hash map
-        Map systemInfo = new HashMap();
-        systemInfo.put("Cucumber version", "v1.2.5");
-        ExtentCucumberFormatter.addSystemInfo(systemInfo);
-    }
+//    @BeforeClass
+//    public static void setup() {
+//        ExtentCucumberFormatter.initiateExtentCucumberFormatter(new File("target/feature-overview/SatishAutomationReport.html"));
+//        // Loads the extent config xml to customize on the report.
+//        ExtentCucumberFormatter.loadConfig(new File("src/test/resources/extent-config.xml"));
+//        // Also you can add system information using a hash map
+//        Map systemInfo = new HashMap();
+//        systemInfo.put("Cucumber version", "v1.2.5");
+//        ExtentCucumberFormatter.addSystemInfo(systemInfo);
+//    }
 }
