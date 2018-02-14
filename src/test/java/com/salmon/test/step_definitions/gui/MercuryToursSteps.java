@@ -9,15 +9,18 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
+
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class MercuryToursSteps {
+    private static final Logger LOG = LoggerFactory.getLogger(MercuryToursRegistrationPage.class);
 
-
-    private MercuryToursRegistrationPage mercuryToursRegistrationPage;
+ private MercuryToursRegistrationPage mercuryToursRegistrationPage;
 
     public MercuryToursSteps(MercuryToursRegistrationPage mercuryToursRegistrationPage){
         this.mercuryToursRegistrationPage = mercuryToursRegistrationPage;
@@ -71,6 +74,8 @@ public class MercuryToursSteps {
                 case "FirstName":
                     assertThat(mercuryToursRegistrationPage.isFirstNameFieldDisplayed());
                     System.out.println("FirstNameField displayed");
+                    LOG.debug("This is first test logged");
+
                     break;
                 case "LastName":
                     assertThat(mercuryToursRegistrationPage.isLastNameFieldDisplayed());

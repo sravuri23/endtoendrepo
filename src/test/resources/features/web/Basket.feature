@@ -6,7 +6,7 @@ Feature: Add to basket button on PDP
 
 Background:
 
-#  Given I navigate to the hotter "Home" page
+  Given the user is on the "Home" page
   When I click on My Account link from the header
   And I enter valid login credentials
   When I enter "Marlowe GTX® Boots" and click on search

@@ -73,7 +73,8 @@
         <selenium.version>3.4.0</selenium.version>
         <junit.version>4.12</junit.version>
         <phantomjs.version>2.1.1</phantomjs.version>
-        <slf4jVersion>1.7.21</slf4jVersion>
+        <slf4jVersion>1.7.7</slf4jVersion>
+        <slf4jLogVersion>1.7.21</slf4jLogVersion>
         <cucumber-jvm-deps>1.0.5</cucumber-jvm-deps>
         <picocontainer>2.15</picocontainer>
         <rest-assured>2.9.0</rest-assured>
@@ -98,6 +99,7 @@
         <oracle.version>10.2.0.5</oracle.version>
         <maven-install-plugin>3.3.9</maven-install-plugin>
         <podam>6.0.2.RELEASE</podam>
+        <cucumber.extents.version>1.1.0</cucumber.extents.version>
     </properties>
 
 
@@ -211,8 +213,7 @@
             </resource>
         </resources>
 
-
-    </build>
+            </build>
 
 
     <!-- All the test dependencies should be declared in this section -->
@@ -338,17 +339,24 @@
 
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4jVersion}</version>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4jLogVersion}</version>
         </dependency>
 
-        <!-- lombok for Getter Setters-->
+       <!-- lombok for Getter Setters-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok}</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
         <!--lombok -->
 
 
@@ -427,7 +435,11 @@
         </dependency-->
         <!--auto fill random data to POJO-->
 
-
+        <dependency>
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>cucumber-extentsreport</artifactId>
+            <version>${cucumber.extents.version}</version>
+        </dependency>
     </dependencies>
 
 

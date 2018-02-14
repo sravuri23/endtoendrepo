@@ -6,7 +6,7 @@ Feature: Acceptance test for create an account
 
 
   Background:
-   # Given I navigate to the hotter "Home" page
+    Given the user is on the "Home" page
     When I click on My Account link from the header
 
   Scenario: Account creation from hotter site
@@ -23,7 +23,7 @@ Feature: Acceptance test for create an account
 
   Scenario: Verify unregistered user is able to login
 
-   # When I enter invalid acccount details
+  # When I enter invalid acccount details
       | Email                 | Password      |
       | asdsadasdas@gmail.com | asfsdfsdfds   |
       | ^&*(&^(&(&@gmail.com  | Testing123    |

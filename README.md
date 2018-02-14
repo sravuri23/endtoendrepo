@@ -46,7 +46,8 @@ The test automation framework is comprised of following tools and libraries
 *Git OR SVN: - Version Control  
 *Gitlab or Local Git Server: - Git repository hosted server  
 *Intellij Or Eclipse: - Integrated Development Environment  
-*Loggers: - Simple Logging Facade for Java  
+*Loggers: - Simple Logging Facade for Java it is binding to the logging framework. It servers as a simple facade or abstraction for various famework example like, Java UTIL logging,
+          - Apache Log4J, logback logging
 *Resource Bundle: - Supporting i18n Localisation and Externalise String 
 *Joda-Time: - Java Date time Api  
 *SonarQube (optional): - Code Quality and Code Coverage  
@@ -95,7 +96,7 @@ git clone https://github.com/salmon-org/master_cucumber_testng.git
 This will download the latest template source code
 
 IDE Configuration
-==================
+
 Intellij plugins  
 ----------------
 Configure and Install Following Plugins  
@@ -163,7 +164,7 @@ run "mvn validate" (To Resolve DB2 dependencies)
 
 
 Framework Setup steps
-============================
+
 The URL, Browser Configuration, jdbc connections etc are defined in the respective config.properties file under each desired profile which you want to run.
 In pom.xml we use the relative path within <profile.path> as shown below to invoke or make use of these profiles. 
 src/main/resources/profiles
@@ -183,7 +184,6 @@ Scroll to Profile section : - Choose desired profile e.g "dev" for running local
 		</profile>
 
 Compile Build or Run Tests
-==========================
 
 Command Line
 
@@ -219,7 +219,7 @@ mvn clean install -Dcucumber.options="@rerun/rerun.txt" -P single
 
 
 Jenkins
-======
+
 
 mvn clean install  -P jenkins
 
@@ -232,14 +232,14 @@ Key: driverport  Default Value: 4444
 
 
 Report
-======
+------
 
 Local reports
 -------------
 Standard HTML Report  
 A report will be generated at /target/cucumber-report/index.html  
 
-Preety Cucumber-Html Report  
+Pretty Cucumber-Html Report
 A report will be generated at /target/cucumber-report/cucumber-html-reports/feature-overview.html 
 
 Jenkins report
@@ -252,7 +252,7 @@ The report will be available as part of configured Jenkins test build
 
 
 Getting Started
-===========================
+---------------
 
 
 Feature Files
