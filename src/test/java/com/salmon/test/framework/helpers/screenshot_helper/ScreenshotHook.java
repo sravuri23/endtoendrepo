@@ -17,7 +17,7 @@ public class ScreenshotHook {
 
     private static final Logger LOG = LoggerFactory.getLogger(ScreenshotHook.class);
 
-    @After({"gui"})
+    @After({"@gui"})
 
     //Not Execute for any api or mobile tests
    // @After
