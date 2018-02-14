@@ -4,7 +4,6 @@ import com.salmon.test.framework.helpers.UrlBuilder;
 import com.salmon.test.models.cucumber.MercuryLoginUserModel;
 import com.salmon.test.models.cucumber.MercuryToursSignUpModel;
 import com.salmon.test.page_objects.gui.MercuryToursRegistrationPage;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,8 +17,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class MercuryToursSteps {
-    private static final Logger LOG = LoggerFactory.getLogger(MercuryToursRegistrationPage.class);
-
+ private static final Logger LOG = LoggerFactory.getLogger(MercuryToursRegistrationPage.class);
  private MercuryToursRegistrationPage mercuryToursRegistrationPage;
 
     public MercuryToursSteps(MercuryToursRegistrationPage mercuryToursRegistrationPage){
@@ -80,10 +78,12 @@ public class MercuryToursSteps {
                 case "LastName":
                     assertThat(mercuryToursRegistrationPage.isLastNameFieldDisplayed());
                     System.out.println("LastNameField displayed");
+                    LOG.debug("This is second test logged");
                     break;
                 case "Phone":
                     assertThat(mercuryToursRegistrationPage.isPhoneNumberFieldDisplayed());
                     System.out.println("PhoneNumber textfield displayed");
+                    LOG.debug("This is third test logged");
                     break;
                 case "Email":
                     assertThat(mercuryToursRegistrationPage.isEmailTextFieldDisplayed());
