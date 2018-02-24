@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-@CucumberOptions(features = "src/test/resources/features/mercurysiteTest", tags = {"@gui"}, monochrome = true, plugin = {
+@CucumberOptions(features = "target/test-classes", tags = {"@gui"}, monochrome = true, plugin = {
         "pretty", "html:target/cucumber-report/runwebat/",
         "json:target/cucumber-report/runwebat/cucumber.json",
         "rerun:target/cucumber-report/runwebat/rerun.txt"},
@@ -24,5 +24,5 @@ public class RunWebATSuite extends AbstractTestNGCucumberTests {
 //        Map systemInfo = new HashMap();
 //        systemInfo.put("Cucumber version", "v1.2.5");
 //        ExtentCucumberFormatter.addSystemInfo(systemInfo);
-//    }
+//    }//src/test/resources/features/mercurysiteTest
 }

@@ -1,9 +1,9 @@
-@gui
+#@demo
 Feature: Hotter plp Tests
 
 
   Scenario: Verify the user is able to sort the results
-  #  Given I navigate to the hotter "Home" page
+    Given the user is on the "Home" page
     When I click on My Account link from the header
     And I enter valid login credentials
     When I enter "Marlowe GTX® Boots" and click on search

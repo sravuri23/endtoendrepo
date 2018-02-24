@@ -1,4 +1,4 @@
-@gui
+#@demo
 Feature: Add to basket button on PDP
   As a customer
   I want to add a product to my basket

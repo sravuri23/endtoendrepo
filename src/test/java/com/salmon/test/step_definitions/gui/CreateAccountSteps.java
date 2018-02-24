@@ -80,18 +80,18 @@ public class CreateAccountSteps {
     }
 
 
-   /* @And("^I enter valid login credentials$")
-    public void iEnterValidLoginCredentials() throws Throwable {
+   @And("^I enter valid login credentials and should be able to login$")
+    public void iEnterValidLoginCredentialsinhottersite() throws Throwable {
         createAccountpage.enterLoginCredentials();
-
-    }*/
-
-    @And("^I should be able to login$")
-    public void iShouldBeAbleToLogin() throws Throwable {
-
         createAccountpage.loginButtonClick();
-
     }
+
+//    @And("^I should be able to login to hotters site$")
+//    public void iShouldBeAbleToLogintohottersite() throws Throwable {
+//
+//        createAccountpage.loginButtonClick();
+//
+//    }
 
     @Then("^I click on signout to logout of my account$")
     public void iClickOnSignoutToLogoutOfMyAccount() throws Throwable {
@@ -163,6 +163,51 @@ public class CreateAccountSteps {
                     break;
             }
         }
+    }
+
+    @And("^enter postcode in the address field$")
+    public void enterPostcodeInTheAddressField() {
+
+    createAccountpage.enterAddressSuggestField();
+
+
+
+
+    }
+
+    @And("^I click on add address submit button$")
+    public void iClickOnAddAddressSubmitButton()  {
+        createAccountpage.clickOnAddressSubmitButton();
+
+    }
+
+    @And("^I enter address details in form$")
+    public void iEnterAddressDetailsInForm()
+    {
+        createAccountpage.enterAutoAddressDetails();
+    }
+
+    @And("^I enter phoneNumber in the form$")
+    public void iEnterPhoneNumberInTheForm(){
+        createAccountpage.enterAutoAddressPhoneNumber();
+
+    }
+
+    @When("^I select address from auto suggest list$")
+    public void iSelectAddressFromAutoSuggestList()  {
+        createAccountpage.addressSelected();
+
+    }
+
+    @When("^I click on addressbook link in my account page$")
+    public void iClickOnAddressbookLinkInMyAccountPage() {
+       createAccountpage.clickAddressBook();
+    }
+
+    @And("^I click on removeAddress from the address page$")
+    public void iClickOnRemoveAddressFromTheAddressPage()  {
+        createAccountpage.clickOnRemoveAddressLink();
+
     }
 }
 

@@ -26,13 +26,13 @@
 
        <!-- Development environment @ my local machine -->
         <profile>
-            <id>dev01_flightsite</id>
+            <id>dev01</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <profile.path>/profiles/dev01_flightsite/config.properties</profile.path>
-                <testToRun>**/*WebATSuite*.class</testToRun>
+                <profile.path>/profiles/dev01/config.properties</profile.path>
+                <testToRun>**/*DesktopSuite*.class</testToRun>
             </properties>
         </profile>
 
@@ -172,12 +172,12 @@
                     <!-- specify UTF-8, ISO-8859-1 or any other file encoding -->
                     <encoding>${utf-8}</encoding>
 
-                    <resources>
+                    <!--resources>
                         <resource>
                             <directory>src/main/resources</directory>
                             <filtering>true</filtering>
                         </resource>
-                    </resources>
+                    </resources-->
 
                 </configuration>
             </plugin>
